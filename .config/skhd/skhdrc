@@ -1,0 +1,37 @@
+# RESIZING WINDOWS
+hyper - h : yabai -m window --grid 1:2:0:0:1:1
+hyper - j : yabai -m window --grid 2:1:0:1:1:1
+hyper - l : yabai -m window --grid 1:2:1:0:1:1
+hyper - k : yabai -m window --grid 2:1:0:0:1:1
+hyper - f : yabai -m window --grid 1:1:0:0:1:1
+
+hyper - y : yabai -m window --grid 2:2:0:0:1:1
+hyper - p : yabai -m window --grid 2:2:1:0:1:1
+
+# MOVING SPACES
+hyper - 1 : yabai -m window --space 1; yabai -m display --focus 1; yabai -m window --grid 1:1:0:0:1:1
+hyper - 2 : yabai -m window --space 2; yabai -m display --focus 2; yabai -m window --grid 1:1:0:0:1:1
+hyper - 3 : yabai -m window --space 3; yabai -m display --focus 3; yabai -m window --grid 1:1:0:0:1:1
+hyper - 4 : yabai -m window --space 4; yabai -m display --focus 4; yabai -m window --grid 1:1:0:0:1:1
+hyper - 5 : yabai -m window --space 5; yabai -m display --focus 5; yabai -m window --grid 1:1:0:0:1:1
+hyper - 6 : yabai -m window --space 6; yabai -m display --focus 6; yabai -m window --grid 1:1:0:0:1:1
+hyper - 7 : yabai -m window --space 7; yabai -m display --focus 7; yabai -m window --grid 1:1:0:0:1:1
+hyper - 8 : yabai -m window --space 8; yabai -m display --focus 8; yabai -m window --grid 1:1:0:0:1:1
+hyper - 9 : yabai -m window --space 9; yabai -m display --focus 9; yabai -m window --grid 1:1:0:0:1:1
+
+# MULTIPLE DISPLAYS
+hyper - n: yabai -m display --focus next || yabai -m display --focus first
+
+# ACTIVATING APPLICATIONS
+hyper - return : /usr/bin/osascript "${HOME}/.config/yabai/kitty.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - b : /usr/bin/osascript "${HOME}/.config/yabai/bitwarden.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - c : /usr/bin/osascript "${HOME}/.config/yabai/browser.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - m : /usr/bin/osascript "${HOME}/.config/yabai/mail.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - v : /usr/bin/osascript "${HOME}/.config/yabai/vscode.applescript"; yabai -m window --grid 1:1:0:0:1:1
+
+# hyper - q : osascript "/Users/sam/Documents/MBP/programming/applescript/close-all-apps.applescript"
+
+# APPLICATION SPECIFIC
+cmd - u [
+    "Google Chrome" : /usr/bin/osascript "${HOME}/.config/yabai/chrome-close-unfocused-tabs.applescript"
+]

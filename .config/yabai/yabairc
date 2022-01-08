@@ -1,0 +1,6 @@
+yabai -m config layout float
+
+yabai -m config auto_balance on
+
+yabai -m config window_topmost on
+

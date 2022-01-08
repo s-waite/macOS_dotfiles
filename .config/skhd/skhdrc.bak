@@ -1,0 +1,52 @@
+# FOCUSING WINDOW
+hyper - h : yabai -m window --focus west
+hyper - j : yabai -m window --focus south
+hyper - k : yabai -m window --focus north
+hyper - l : yabai -m window --focus east
+
+# SWAPPING WINDOWS
+hyper - y : yabai -m window --swap west
+hyper - u : yabai -m window --swap south
+hyper - i : yabai -m window --swap north
+hyper - o : yabai -m window --swap east
+
+# RESIZING WINDOWS
+hyper - left : yabai -m window west --resize right:-20:0 2> /dev/null || yabai -m window --resize right:-20:0
+hyper - down : yabai -m window north --resize bottom:0:20 2> /dev/null || yabai -m window --resize bottom:0:20
+hyper - up : yabai -m window south --resize top:0:-20 2> /dev/null || yabai -m window --resize top:0:-20
+hyper - right : yabai -m window east --resize left:20:0 2> /dev/null || yabai -m window --resize left:20:0
+hyper - e : yabai -m space --balance
+
+# ZOOMING WINDOWS
+hyper - d : yabai -m window --toggle zoom-parent
+hyper - f : yabai -m window --toggle zoom-fullscreen
+
+# MOVING WINDOWS TO DESKTOPS
+rcmd + ralt - 1 : yabai -m window --space 1
+rcmd + ralt - 2 : yabai -m window --space 2
+rcmd + ralt - 3 : yabai -m window --space 3
+rcmd + ralt - 4 : yabai -m window --space 4
+rcmd + ralt - 5 : yabai -m window --space 5
+rcmd + ralt - 6 : yabai -m window --space 6
+rcmd + ralt - 7 : yabai -m window --space 7
+rcmd + ralt - 8 : yabai -m window --space 8
+rcmd + ralt - 9 : yabai -m window --space 9
+
+# FOCUSING DESKTOPS
+hyper - 1 : osascript -e 'tell application "System Events" to key code 18 using control down'
+hyper - 2 : osascript -e 'tell application "System Events" to key code 19 using control down'
+hyper - 3 : osascript -e 'tell application "System Events" to key code 20 using control down'
+hyper - 4 : osascript -e 'tell application "System Events" to key code 21 using control down'
+hyper - 5 : osascript -e 'tell application "System Events" to key code 23 using control down'
+hyper - 6 : osascript -e 'tell application "System Events" to key code 22 using control down'
+hyper - 7 : osascript -e 'tell application "System Events" to key code 26 using control down'
+hyper - 8 : osascript -e 'tell application "System Events" to key code 28 using control down'
+hyper - 9 : osascript -e 'tell application "System Events" to key code 25 using control down'
+
+
+# ROTATING WINDOWS
+hyper - r : yabai -m space --rotate 90
+
+# OPENING/CLOSING PROGRAMS
+# hyper - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+hyper - q : osascript /Users/sam/Documents/scripts/applescript/close-all-but-focused.applescript
