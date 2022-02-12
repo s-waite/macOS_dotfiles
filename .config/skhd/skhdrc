@@ -23,15 +23,22 @@ hyper - 9 : yabai -m window --space 9; yabai -m display --focus 9; yabai -m wind
 hyper - n: yabai -m display --focus next || yabai -m display --focus first
 
 # ACTIVATING APPLICATIONS
-hyper - return : /usr/bin/osascript "${HOME}/.config/yabai/kitty.applescript"; yabai -m window --grid 1:1:0:0:1:1
-hyper - b : /usr/bin/osascript "${HOME}/.config/yabai/bitwarden.applescript"; yabai -m window --grid 1:1:0:0:1:1
-hyper - c : /usr/bin/osascript "${HOME}/.config/yabai/browser.applescript"; yabai -m window --grid 1:1:0:0:1:1
-hyper - m : /usr/bin/osascript "${HOME}/.config/yabai/mail.applescript"; yabai -m window --grid 1:1:0:0:1:1
-hyper - v : /usr/bin/osascript "${HOME}/.config/yabai/vscode.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - return : /usr/bin/osascript "${HOME}/.config/skhd/kitty.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - b : /usr/bin/osascript "${HOME}/.config/skhd/bitwarden.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - c : /usr/bin/osascript "${HOME}/.config/skhd/browser.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - m : /usr/bin/osascript "${HOME}/.config/skhd/mail.applescript"; yabai -m window --grid 1:1:0:0:1:1
+hyper - v : /usr/bin/osascript "${HOME}/.config/skhd/vscode.applescript"; yabai -m window --grid 1:1:0:0:1:1
 
-# hyper - q : osascript "/Users/sam/Documents/MBP/programming/applescript/close-all-apps.applescript"
+# QUITTING APPLICATIONS
+hyper - q : /usr/bin/osascript "${HOME}/.config/skhd/quit-all-apps.applescript"
+hyper - u : /usr/bin/osascript "${HOME}/.config/skhd/quit-unfocused-apps.applescript"
 
 # APPLICATION SPECIFIC
 cmd - u [
-    "Google Chrome" : /usr/bin/osascript "${HOME}/.config/yabai/chrome-close-unfocused-tabs.applescript"
+    "Google Chrome" : /usr/bin/osascript "${HOME}/.config/skhd/chrome-close-unfocused-tabs.applescript"
+    "Safari" : /usr/bin/osascript "${HOME}/.config/skhd/safari-close-unfocused-tabs.applescript"
 ]
+
+
+
+
